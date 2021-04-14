@@ -12,17 +12,16 @@ spec:
         service: udagram-api
     spec:
       containers:
-      - image: xthian82/udagram-api
-        name: udagram-api
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
-      livenessProbe:
-        httpGet:
-          path: /health
-          port: 8080
-        initialDelaySeconds: 3
-        periodSeconds: 3
+        - image: xthian82/udagram-api
+          name: udagram-api
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
       restartPolicy: Always
-
-
