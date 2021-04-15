@@ -19,4 +19,4 @@ spec:
         - name: udagram-api
           image: xthian82/udagram-api
           ports:
-            - containerPort: 8080
+            - containerPort: 80
