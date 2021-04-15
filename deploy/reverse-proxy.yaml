@@ -28,14 +28,10 @@ metadata:
     service: udagram-api
   name: udagram-api-svc
 spec:
-  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 80
       protocol: TCP
       name: http
-    - port: 443
-      protocol: TCP
-      name: https
   selector:
     service: udagram-api
