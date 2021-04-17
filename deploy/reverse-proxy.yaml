@@ -28,7 +28,7 @@ metadata:
     service: udagram-api
   name: udagram-api-svc
 spec:
-  externalName: udagram-api
+  externalName: udagram-api-svc
   ports:
   - name: "8080"
     port: 8080
