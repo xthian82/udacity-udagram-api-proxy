@@ -28,10 +28,10 @@ metadata:
     service: udagram-api
   name: udagram-api-svc
 spec:
-  externalName: udagram-api-svc
+  type: LoadBalancer
   ports:
-  - name: "8080"
-    port: 8080
+  - name: "80"
+    port: 80
     targetPort: 8080
   selector:
     service: udagram-api
